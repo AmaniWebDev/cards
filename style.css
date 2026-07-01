@@ -1,0 +1,138 @@
+html{
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.card {
+  width: 600px; 
+  height: 620px; 
+  background-color: rgba(249, 249, 19, 0.979);
+  border: none;
+  box-shadow: 2px 16px 20px rgba(15, 15, 15, 0.6);
+  border-radius: 2.9rem ;
+  position: relative; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  flex-direction: column;
+  z-index: 1;
+  
+}
+
+.card-imag {
+  width: 380px; 
+  height: 400px; 
+  background-image: url('./img/00.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 1.5rem;
+   z-index: 2222;
+}
+.boxs-bottem{
+  position: absolute;
+   width: 100%;
+   height: 340px;
+   backdrop-filter: blur(10px);
+   border-bottom-right-radius:1.5rem;
+  border-bottom-left-radius:1.5rem;
+  backdrop-filter: blur(20px);
+   background-color: #222;
+   z-index: 2222;
+   margin-top: 285px;
+
+}
+.card .boxs-bottem::before{
+    content: "";
+    position: absolute;
+    height: 2rem;
+    width: 10rem;
+    left: -0px;
+    top: 11rem;
+     border-radius:10px 0 0 0;
+    padding: 1rem;
+   z-index:222 ;
+
+ 
+}
+.card .boxs-bottem::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 12rem;
+    backdrop-filter: blur(10px);
+  
+    border-left: 40px solid #222;
+    border-right: 60px solid #222;
+    border-top: 60px solid #222;
+      border-radius:  10px 855px 0px 0 ;
+    padding: 1rem;
+   z-index: 2221;
+  margin-top: -300px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 99px;
+}
+.title .text{
+    width: 200px;
+    height: 150px;
+    display: flex;
+   align-items: center;
+   flex-direction: column;
+   font-weight: 400;
+   margin-left: 20px;
+
+}
+.title .text h1{
+    font-size: 60px;
+    margin-left: 25px;
+    color:  rgba(249, 249, 19, 0.979);
+}
+.title .text p {
+    margin-top: -10px;
+    font-size: 20px;
+    margin-left: 25px;
+    font-weight: 800;
+    color:  rgba(249, 249, 19, 0.979);
+
+}
+.title .rotat{
+    margin-right: 40px;
+    font-size: 60px;
+    margin-top:70px;
+    color:  rgba(249, 249, 19, 0.979);
+   animation: rotate 3s infinite steps(2000) ;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+         transform: rotate(360deg);
+    }
+}
+.card:hover .card-imag{
+     animation: goo 1s forwards steps(2000) ;
+    overflow: block;
+}
+
+@keyframes goo {
+    0%{
+       
+        transform: translateY(0px) rotate(0deg);
+    }
+     100%{
+       
+        transform: translateY(-40px) rotate(20deg)  scale(1.2);
+ 
+    }
+}
